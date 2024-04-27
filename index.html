@@ -5,29 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Info Cards</title>
         <link rel="stylesheet" href="css/style.css">
+
     </head>
     <body>
         <section>
-        <div id="card-1" class="widget">
-            <h1>Project 1</h1>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
+            <div class="widget" onclick="expandDetails('project1')">
+                <h1>Project 1</h1>
+                <div id="project1-details" class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
+                </div>
             </div>
-        </div>
 
-        <div id="card-1" class="widget">
-            <h1>Project 2</h1>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
+            <div class="widget" onclick="expandDetails('project2')">
+                <h1>Project 2</h1>
+                <div id="project2-details" class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
+                </div>
             </div>
-        </div>
 
-        <div id="card-1" class="widget">
-            <h1>Project 3</h1>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
+            <div class="widget" onclick="expandDetails('project3')">
+                <h1>Project 3</h1>
+                <div id="project3-details" class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
+                </div>
             </div>
-        </div>
         </section>
+        <script>
+            function expandDetails(projectId) {
+                var projectDetails = document.getElementById(projectId + '-details');
+                projectDetails.classList.toggle('active');
+            }
+        </script>
     </body>
 </html>
