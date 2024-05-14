@@ -23,7 +23,7 @@ section{
     box-sizing: border-box;
 }
 
-.widget:hover {
+.widget:hover{
     height: 50vh;
 }
 
