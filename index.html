@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Info Cards</title>
-        <link rel="stylesheet" href="css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Cards</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <div class="widget" onclick="expandDetails(this)">
+            <h1>Project 1</h1>
+            <div id="project1-details" class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
+            </div>
+        </div>
 
-    </head>
-    <body>
-        <section>
-            <div class="widget" onclick="expandDetails('project1')">
-                <h1>Project 1</h1>
-                <div id="project1-details" class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
-                </div>
+        <div class="widget" onclick="expandDetails(this)">
+            <h1>Project 2</h1>
+            <div id="project2-details" class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
             </div>
+        </div>
 
-            <div class="widget" onclick="expandDetails('project2')">
-                <h1>Project 2</h1>
-                <div id="project2-details" class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
-                </div>
+        <div class="widget" onclick="expandDetails(this)">
+            <h1>Project 3</h1>
+            <div id="project3-details" class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
             </div>
+        </div>
 
-            <div class="widget" onclick="expandDetails('project3')">
-                <h1>Project 3</h1>
-                <div id="project3-details" class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
-                </div>
+        <div class="widget" onclick="expandDetails(this)">
+            <h1>Project 4</h1>
+            <div id="project4-details" class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
             </div>
-            <div class="widget" onclick="expandDetails('project4')">
-                <h1>Project 4</h1>
-                <div id="project4-details" class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales hendrerit velit, id finibus tellus commodo mattis.</p>
-                </div>
-            </div>
-        </section>
-    </body>
+        </div>
+    </section>
+    <script>
+        function expandDetails(element) {
+            const isExpanded = element.classList.contains('expanded');
+            document.querySelectorAll('.widget').forEach(widget => widget.classList.remove('expanded'));
+            if (!isExpanded) {
+                element.classList.add('expanded');
+            }
+        }
+    </script>
+</body>
 </html>

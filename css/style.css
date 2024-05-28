@@ -11,6 +11,7 @@ h1 {
 section{
     padding:10px;
 }
+
 .widget {
     margin-top: 10px;
     background-color: darkgrey;
@@ -23,16 +24,15 @@ section{
     box-sizing: border-box;
 }
 
-.widget:hover{
+.widget.expanded {
     height: 50vh;
 }
 
 .content {
-    color: rgba(000,000,000,0);
-    transition: 1s;
+    color: rgba(0,0,0,0);
+    transition: color 1s;
 }
 
-.widget:hover .content {
-    color: rgba(000,000,000,1);
-    transition: 1s;
+.widget.expanded .content {
+    color: rgba(0,0,0,1);
 }
